@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Maleta Run</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="game-container">
+      <canvas id="gameCanvas"></canvas>
+      
+      <!-- Main Menu -->
+      <div id="main-menu" class="screen active">
+        <div class="glass-panel">
+          <h1>MALETA RUN</h1>
+          <p class="subtitle">Takbo, Pulitiko, Takbo!</p>
+          
+          <div class="input-group">
+            <label for="playerName">Pangalan ng Manlalaro:</label>
+            <input type="text" id="playerName" placeholder="Ilagay ang pangalan..." maxlength="15" autocomplete="off">
+          </div>
+          
+          <div class="input-group">
+            <label>Piliin ang iyong Karakter:</label>
+            <div class="character-selection">
+              <div class="char-option selected" data-role="presidente" data-img="/assets/presidente.svg">
+                <img src="/assets/presidente.svg" alt="Presidente">
+                <span>Presidente</span>
+              </div>
+              <div class="char-option" data-role="senador" data-img="/assets/senador.svg">
+                <img src="/assets/senador.svg" alt="Senador">
+                <span>Senador</span>
+              </div>
+              <div class="char-option" data-role="kongresista" data-img="/assets/kongresista.svg">
+                <img src="/assets/kongresista.svg" alt="Kongresista">
+                <span>Kongresista</span>
+              </div>
+            </div>
+          </div>
+          
+          <button id="start-btn" class="btn-primary">MAGSIMULA</button>
+        </div>
+      </div>
+
+      <!-- HUD -->
+      <div id="hud" class="screen">
+        <div class="hud-top">
+          <div class="player-info">
+            <img id="hud-avatar" src="/assets/presidente.svg" alt="Avatar">
+            <div class="info-text">
+              <span id="hud-name">Player</span>
+              <span id="hud-role">Presidente</span>
+            </div>
+          </div>
+          <div class="score-container">
+            <span class="score-label">Puntos</span>
+            <span id="hud-score">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Over Screen -->
+      <div id="game-over" class="screen">
+        <div class="glass-panel game-over-panel">
+          <h2>TAPOS NA ANG LARO!</h2>
+          <div class="final-score-container">
+            <span>Puntos mo:</span>
+            <span id="final-score">0</span>
+          </div>
+          <button id="restart-btn" class="btn-primary">ULITIN</button>
+          <button id="menu-btn" class="btn-secondary">MAIN MENU</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
