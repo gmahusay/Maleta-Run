@@ -61,16 +61,18 @@ const images = {
   pulis: new Image(),
   bus: new Image()
 };
-images.presidente.src = '/assets/presidente.svg';
-images.senador.src = '/assets/senador.svg';
-images.kongresista.src = '/assets/kongresista.svg';
-images.maleta.src = '/assets/maleta.png';
-images.pera.src = '/assets/pera.png';
-images.background.src = '/assets/background.png';
-images.tao.src = '/assets/tao.svg';
-images.pulis.src = '/assets/pulis.svg';
-images.bus.src = '/assets/bus.svg';
 
+const BASE = '/Maleta-Run/'
+
+images.presidente.src = `${BASE}assets/presidente.svg`;
+images.senador.src = `${BASE}assets/senador.svg`;
+images.kongresista.src = `${BASE}assets/kongresista.svg`;
+images.maleta.src = `${BASE}assets/maleta.png`;
+images.pera.src = `${BASE}assets/pera.png`;
+images.background.src = `${BASE}assets/background.png`;
+images.tao.src = `${BASE}assets/tao.svg`;
+images.pulis.src = `${BASE}assets/pulis.svg`;
+images.bus.src = `${BASE}assets/bus.svg`;
 // --- Audio System (Synth) ---
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 let audioCtx;
